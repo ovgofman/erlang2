@@ -37,10 +37,9 @@ trim(Bin) ->
 
 len(L) ->
   cnt(L, 0).
-
-cnt(L, N) ->
+len(L, N) ->
   case L of
-    <<_, T/binary>> -> cnt(T, N + 1);
+    <<_, T/binary>> -> len(T, N + 1);
     _ -> N
   end.
 
